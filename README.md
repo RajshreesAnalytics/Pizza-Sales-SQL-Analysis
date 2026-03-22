@@ -39,10 +39,12 @@ The dataset includes:
 ---
 
 ## 💡 Key Insights
-- Identified best-selling pizzas
-- Found peak ordering hours
-- Analyzed revenue contribution by category
 
+- The business generated significant revenue driven mainly by a few top-performing pizzas.
+- Classic and Supreme categories contribute the highest share of revenue.
+- Peak order hours are during evening time, indicating strong dinner demand.
+- Large size pizzas are the most preferred among customers.
+- A small number of pizzas contribute to a large portion of total sales (Pareto effect).
 ---
 
 ## 🚀 How to Use
