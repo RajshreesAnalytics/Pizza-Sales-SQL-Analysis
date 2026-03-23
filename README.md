@@ -32,19 +32,33 @@ The dataset includes:
 - GitHub
 
 ---
+## 🛠️ SQL Concepts Used
+- JOIN
+- GROUP BY
+- ORDER BY
+- Aggregations (SUM, COUNT)
+- Window Functions (RANK, ROW_NUMBER)
 
 ## 📁 Files in this Repository
 - `pizza_sales_analysis.sql` → SQL queries for analysis
+  
+## 📊 Sample Query
 
+```sql
+SELECT pt.name, SUM(od.quantity * p.price) AS revenue
+FROM order_details od
+JOIN pizzas p ON od.pizza_id = p.pizza_id
+JOIN pizza_types pt ON p.pizza_type_id = pt.pizza_type_id
+GROUP BY pt.name
+ORDER BY revenue DESC
+LIMIT 5;
 ---
-
 ## 💡 Key Insights
+- Classic category generates highest revenue
+- Evening hours have peak orders
+- Large pizzas are most preferred
+- Top products contribute major share of revenue
 
-- The business generated significant revenue driven mainly by a few top-performing pizzas.
-- Classic and Supreme categories contribute the highest share of revenue.
-- Peak order hours are during evening time, indicating strong dinner demand.
-- Large size pizzas are the most preferred among customers.
-- A small number of pizzas contribute to a large portion of total sales (Pareto effect).
 ---
 
 ## 🚀 How to Use
